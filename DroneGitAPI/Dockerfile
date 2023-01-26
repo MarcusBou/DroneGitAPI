@@ -11,8 +11,8 @@ FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
 COPY ["./DroneGitAPI.csproj", "DroneGitAPI/"]
 RUN dotnet restore "DroneGitAPI/DroneGitAPI.csproj"
-COPY . .
 WORKDIR "/src/DroneGitAPI"
+COPY . .
 RUN dotnet build "DroneGitAPI.csproj" -c Release -o /app/build
 
 FROM build AS publish
