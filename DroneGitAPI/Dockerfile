@@ -2,8 +2,8 @@
 
 FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
 WORKDIR /app
-
-ENV DOTNET_URLS=http://+:8000
+EXPOSE 80
+EXPOSE 443
 
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
