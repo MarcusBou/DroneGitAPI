@@ -1,5 +1,3 @@
-
-
 namespace DroneGitAPI
 {
     class Program
@@ -30,5 +28,6 @@ namespace DroneGitAPI
 
             app.Run();
         }
+    }
 }
 
