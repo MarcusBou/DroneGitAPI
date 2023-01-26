@@ -6,7 +6,7 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["DroneGitAPI/DroneGitAPI.csproj", "DroneGitAPI/"]
+COPY ["./DroneGitAPI.csproj", "DroneGitAPI/"]
 RUN dotnet restore "DroneGitAPI/DroneGitAPI.csproj"
 WORKDIR "/src/DroneGitAPI"
 COPY . .
